@@ -16,9 +16,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
-    <title>Document</title>
+    <title class="studio">Document</title>
   </head>
-  <body>
+  <body class="studio">
     <!--Fixed  -->
     <header class="header">
       <div class="conteiner">
@@ -28,14 +28,16 @@
           </a>
           <ul class="nav">
             <li>
-              <a class="link" href="./index.html" target="_self">Studio</a>
+              <a class="link port" href="./index.html" target="_self">Studio</a>
             </li>
             <li class="nav-margin">
               <a class="link" href="./portfolio.html" target="_self"
                 >Portfolio</a
               >
             </li>
-            <li class="nav-margin"><a class="link" href="">Contacts</a></li>
+            <li class="nav-margin">
+              <a class="link" href="">Contacts</a>
+            </li>
           </ul>
         </nav>
         <address class="address">
@@ -61,7 +63,9 @@
       <section class="hero">
         <div class="conteiner">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="order" type="button">Order Service</button>
+          <button class="order" data-modal-open type="button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -560,6 +564,20 @@
         </div>
       </div>
     </footer>
+    <div class="bacdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-modal">
+          <svg>
+            <use
+              class="close-icon"
+              data-modal-close
+              href="./images/close-black.svg"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>

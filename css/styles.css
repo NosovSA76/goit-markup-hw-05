@@ -12,6 +12,7 @@
     --set-gap: 24px;
     --icon-color:#AFB1B8;
     --icon-green: #31D0AA;
+    --modal-bac:#FCFCFC;
 
     }
 h1, h2, h3, h4, ul, p{
@@ -43,6 +44,7 @@ body{
 
 /* Header */
 .header{
+    position: relative;
     padding: 24px 0;
     border-bottom: 1px solid var(--button-border);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -86,13 +88,32 @@ body{
 }
 
 .link{
+    position: relative;
     font-weight: 500;
     color: var(--title-text-color);
     text-decoration: none;
     letter-spacing: 0.02em;
     line-height: 1.5;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+   
 }
+
+
+.port::after{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    bottom: -28px; 
+    left: 0;
+    display:block;
+    background-color:var(--active-color);
+    border-radius: 2px;
+  
+ }
+
+
 
 
 .link:hover, .link:focus{
@@ -306,10 +327,7 @@ body{
 
 .advantages-item{
  flex-basis: calc((100% - var(--set-gap)*3)/4);
-
 }
-
-
 
 
 .advantages-title-small{
@@ -455,12 +473,51 @@ body{
     width: 104px;
     height: 56px;
     fill: currentColor;
-    
-    
 }
 
+/* Bacdrop+Modal */
+
+.bacdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+}
   
- 
+.bacdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+ .modal{
+    position: absolute;
+    top: 50%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    height: 576px;
+    background-color: var(--modal-bac);
+    transform: perspective(600px) translate(0px, 0) rotatex(0deg);
+ }
+
+ .close-modal{
+
+    display: block;
+    background-color: var(--button-border);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: black;
+ }
+.close-icon{
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    fill:black;
+}
 
 
 /* portfolio */
@@ -515,6 +572,7 @@ body{
     display: block;
      text-decoration: none;
      transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     position: relative;
 }
 
 .project-item{
@@ -544,3 +602,21 @@ body{
        0px 1px 1px rgba(46, 47, 66, 0.16), 
        0px 2px 1px rgba(46, 47, 66, 0.08);
     }
+
+    .projects::before{
+        content: "";
+        position: absolute;
+        width: 360px;
+        height: 300px;
+        background-color: rgb(77, 90, 229);
+        transform: scaleY(0);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: bottom;
+        
+    }
+    .projects:hover::before{
+       transform: scaleY(1);
+       opacity: 1;
+       
+    }
+
