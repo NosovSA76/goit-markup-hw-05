@@ -501,24 +501,22 @@ body{
    }
 
  .close-modal{
-     position: absolute;
-     top: 24px;
-     right: 24px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     display: block;
     background-color: var(--button-border);
     border: 1px solid rgba(0, 0, 0, 0.1);
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    color: black;
- }
+    
+}
 .close-icon{
     position: absolute;
     top: 50%;
     Left: 50%;
     transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
     fill:black;
 }
 
