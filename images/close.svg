@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" ><circle cx="12" cy="12" r="12" /><circle cx="12" cy="12" r="11.5" stroke="#000" stroke-opacity=".1"/><g clip-path="url(#a)"><path  d="M16 8.806 15.194 8 12 11.194 8.806 8 8 8.806 11.194 12 8 15.194l.806.806L12 12.806 15.194 16l.806-.806L12.806 12 16 8.806Z"/></g><defs><clipPath id="a"><path  d="M8 8h8v8H8z"/></clipPath></defs></svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-close" viewBox="0 0 32 32">
+<path d="M32 3.223l-3.223-3.223-12.777 12.777-12.777-12.777-3.223 3.223 12.777 12.777-12.777 12.777 3.223 3.223 12.777-12.777 12.777 12.777 3.223-3.223-12.777-12.777 12.777-12.777z"></path>
+</symbol>
+</defs>
+</svg>
