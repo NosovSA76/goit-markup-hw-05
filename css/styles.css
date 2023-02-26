@@ -510,23 +510,22 @@ body{
     width: 24px;
     height: 24px;
     border-radius: 50%;
-     font-weight: 400;
-    font-size: 16px;
-    
+      
 }
 .close-icon{
-     font-weight: 400;
-    font-size: 16px;
     position: absolute;
     top: 50%;
     Left: 50%;
     transform: translate(-50%, -50%);
-    fill:black;
     width: 8px;
     height: 8px;
 }
 
-
+.close-modal:active{
+ border: none;
+ background-color: var(--active-color);
+ fill: var(--only-white);
+}
 
 
 /* portfolio */
