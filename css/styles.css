@@ -492,17 +492,18 @@ body{
 }
  .modal{
     position: absolute;
-    top: 50%;
+    top: 88px;
     Left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     width: 408px;
     height: 576px;
     background-color: var(--modal-bac);
-    transform: perspective(600px) translate(0px, 0) rotatex(0deg);
- }
+   }
 
  .close-modal{
-
+     position: absolute;
+     top: 24px;
+     right: 24px;
     display: block;
     background-color: var(--button-border);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -513,11 +514,15 @@ body{
  }
 .close-icon{
     position: absolute;
-    display: block;
+    top: 50%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
     fill:black;
 }
+
+
 
 
 /* portfolio */
@@ -614,7 +619,7 @@ body{
         transform-origin: bottom;
         
     }
-    .projects:hover::before{
+    .projects:hover::before, .projects:focus::before{
        transform: scaleY(1);
        opacity: 1;
        
